@@ -228,7 +228,8 @@ article.active {
 .h2,
 .h3,
 .h4,
-.h5 {
+.h5,
+.h6 {
   color: var(--white-2);
   text-transform: capitalize;
 }
@@ -242,6 +243,11 @@ article.active {
 .h5 {
   font-size: var(--fs-7);
   font-weight: var(--fw-500);
+}
+
+.h6 {
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
 }
 
 .article-title {
@@ -1465,7 +1471,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 25px;
     padding: 30px;
     border-radius: 20px;
-  }
+}
 
   .modal-img-wrapper {
     display: flex;
@@ -1474,9 +1480,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .modal-avatar-box {
-    border-radius: 18px;
+    border-radius: 50%;
     margin-bottom: 0;
-  }
+}
 
   .modal-avatar-box img { width: 65px; }
 

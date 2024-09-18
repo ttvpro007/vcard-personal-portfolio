@@ -94,46 +94,6 @@ const filterFunc = function (selectedValue) {
 
 }
 
-
-// portfolio variables
-const portfolioItem = document.querySelectorAll("[data-portfolio-item]");
-const portfolioModalContainer = document.querySelector("[data-portfolio-modal-container]");
-const portfolioModalCloseBtn = document.querySelector("[data-portfolio-modal-close-btn]");
-const portfolioOverlay = document.querySelector("[data-portfolio-overlay]");
-
-// portfolio modal variable
-const portfolioModalImg = document.querySelector("[data-portfolio-modal-img]");
-const portfolioModalTitle = document.querySelector("[data-portfolio-modal-title]");
-const portfolioModalText = document.querySelector("[data-portfolio-modal-text]");
-
-// portfolio modal toggle function
-const portfolioModalFunc = function () {
-  portfolioModalContainer.classList.toggle("active");
-  portfolioOverlay.classList.toggle("active");
-}
-
-// add click event to all portfolio modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    portfolioModalImg.src = this.querySelector("[data-portfolio-avatar]").src;
-    portfolioModalImg.alt = this.querySelector("[data-portfolio-avatar]").alt;
-    portfolioModalTitle.innerHTML = this.querySelector("[data-portfolio-title]").innerHTML;
-    portfolioModalText.innerHTML = this.querySelector("[data-portfolio-text]").innerHTML;
-
-    portfolioModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-portfolioModalCloseBtn.addEventListener("click", portfolioModalFunc);
-portfolioOverlay.addEventListener("click", portfolioModalFunc);
-
-
-
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
